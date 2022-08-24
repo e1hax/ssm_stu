@@ -1,7 +1,7 @@
-package com.ssm.service.impl;
+package com.ssm.factory.impl;
 
 import com.ssm.dao.BookDao;
-import com.ssm.service.BookSerivce;
+import com.ssm.factory.BookSerivce;
 
 /**
  * Created by e1hax on 2022-08-24.

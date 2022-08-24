@@ -12,7 +12,7 @@
 <!--    class属性表示给bean定义类型-->
     <bean id="bookDao" class="com.ssm.dao.impl.BookDaoImpl" />
 
-    <bean id="bookService" class="com.ssm.service.impl.BookServiceImpl" >
+    <bean id="bookService" class="com.ssm.factory.impl.BookServiceImpl" >
     <!--    7。配置dao与service的关系-->
     <!--    property标签表示配置当前bean的属性-->
     <!--    name 属性表示配置哪一个具体的属性-->

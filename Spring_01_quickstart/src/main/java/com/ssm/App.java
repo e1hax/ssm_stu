@@ -1,6 +1,6 @@
 package com.ssm;
 
-import com.ssm.service.impl.BookServiceImpl;
+import com.ssm.factory.impl.BookServiceImpl;
 
 /**
  * Created by e1hax on 2022-08-24.

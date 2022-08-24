@@ -1,7 +1,6 @@
 package com.ssm;
 
-import com.ssm.dao.BookDao;
-import com.ssm.service.BookSerivce;
+import com.ssm.factory.BookSerivce;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
