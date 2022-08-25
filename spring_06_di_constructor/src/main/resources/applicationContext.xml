@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--标准书写-->
+    <!--<bean id="bookDao" class="com.ssm.dao.impl.BookDaoImpl">-->
+    <!--    <constructor-arg name="databaseName" value="mysql"></constructor-arg>-->
+    <!--    <constructor-arg name="connectionNum" value="10"></constructor-arg>-->
+    <!--</bean>-->
+    <!--<bean id="userDao" class="com.ssm.dao.impl.UserDaoImpl"/>-->
+
+    <!--<bean id="bookService" class="com.ssm.service.impl.BookServiceImpl">-->
+    <!--    <constructor-arg name="bookDao" ref="bookDao"></constructor-arg>-->
+    <!--    <constructor-arg name="userDao" ref="userDao"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--解决与形参名称问题，与形参名不耦合-->
+    <!--<bean id="bookDao" class="com.ssm.dao.impl.BookDaoImpl">-->
+    <!--    <constructor-arg  type="int" value="10" />-->
+    <!--    <constructor-arg type="java.lang.String" value="mysql" />-->
+    <!--</bean>-->
+    <!--<bean id="userDao" class="com.ssm.dao.impl.UserDaoImpl"/>-->
+
+    <!--<bean id="bookService" class="com.ssm.service.impl.BookServiceImpl">-->
+    <!--    <constructor-arg name="bookDao" ref="bookDao"></constructor-arg>-->
+    <!--    <constructor-arg name="userDao" ref="userDao"></constructor-arg>-->
+    <!--</bean>-->
+
+    <!--解决问题的类型，使用位置解决参数匹配-->
+    <bean id="bookDao" class="com.ssm.dao.impl.BookDaoImpl">
+        <constructor-arg  index="0" value="mysql" />
+        <constructor-arg  index="1"  value="10" />
+    </bean>
+    <bean id="userDao" class="com.ssm.dao.impl.UserDaoImpl"/>
+
+    <bean id="bookService" class="com.ssm.service.impl.BookServiceImpl">
+        <constructor-arg name="bookDao" ref="bookDao"></constructor-arg>
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+
+</beans>
