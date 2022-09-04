@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    active: ${profile.active}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: pro
+server:
+  port: 8081
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+server:
+  port: 8082

@@ -1,0 +1,13 @@
+lesson: SpringBoot
+
+server:
+  port: 8080
+
+enterprise:
+  name: jack
+  age: 16
+  tel: 888888
+  subject:
+    - java
+    - 前端
+    - 大数据

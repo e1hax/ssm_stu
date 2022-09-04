@@ -1,0 +1,26 @@
+#选择环境
+spring:
+  profiles:
+    active: dev
+
+---
+#第二种书写凡是
+#开发
+spring:
+  config:
+    activate:
+      on-profile: dev
+server:
+  port: 8080
+---
+#生产
+spring:
+  profiles: pro
+server:
+  port: 8081
+---
+#测试
+spring:
+  profiles: test
+server:
+  port: 8082
